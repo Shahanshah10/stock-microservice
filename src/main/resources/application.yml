@@ -23,8 +23,7 @@ astra.db:
   id: <database_id>
   region: westus3
   keyspace: portfolio_tracker
-  application.token: ##token
-
+  application.token: <token>
 exchange-service:
   url: https://api.frankfurter.app/latest?from={from}&to={to}
 
