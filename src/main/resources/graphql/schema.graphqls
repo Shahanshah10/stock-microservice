@@ -1,0 +1,17 @@
+type Query{
+    retrieveStocks(currency: String): [Stock]
+}
+
+type Stock{
+    stockId: Int,
+    symbol:String,
+    companyName: String,
+    sector: String,
+    price:  Float,
+    exchange: String,
+    currency:String,
+    openPrice:  Float,
+    closePrice:  Float,
+    active: Boolean,
+    lastUpdatedDate:String
+}

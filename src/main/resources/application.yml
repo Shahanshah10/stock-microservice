@@ -1,0 +1,37 @@
+spring:
+  application:
+    name: stock-microservice
+  graphql:
+    path: /graphql
+    graphiql:
+      enabled: true
+  cassandra:
+    keyspace-name: portfolio_tracker
+    username: cprJTEFqgXMpathKxxsiMgZz
+    password: mPOU3N8H_FNhJY_i5MS.w.WBXJPKH4Kmmfri-YZcYeuEKZtfr2ZAfb.2SRlrh+TNpZ6MkaM1NdDsFlHMU8aQXm1bHGGhx9Y0KfPRjc.4g_nnMAy52HfCGNOE.fTnXQCM
+    schema-action: create_if_not_exists
+    request:
+      timeout: 10s
+    connection:
+      connect-timeout: 10s
+      init-query-timeout: 10s
+
+datastax.astra:
+  secure-connect-bundle: src/main/resources/secure-connect-banking-stocks.zip
+
+astra.db:
+  id: 78db849b-40a8-449f-b7ee-4fa25a5fe3e6
+  region: westus3
+  keyspace: portfolio_tracker
+  application.token: AstraCS:cprJTEFqgXMpathKxxsiMgZz:9603cdb2217592e00db5197bcc8afb51bc17bdc4123bf842d25f2b1a22c45ef0
+
+exchange-service:
+  url: https://api.frankfurter.app/latest?from={from}&to={to}
+
+
+#  cassandra:
+ ## contact-points: 127.0.0.1
+ ##keyspace-name: portfolio_tracker
+ ## port: 9042
+ ## local-datacenter: datacenter1
+ ## schema-action: create_if_not_exists
